@@ -14,69 +14,65 @@
 <body>
     <div class = "container">
         <h1 id="title">Welcome to Connect Four!</h1>
-    <h3>Player 1's turn</h3>
     </div>
-    <div class = "game row">
-        <div class = "board">
-            <div class = "gameRow">
-                <div class = "cell top"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-            </div>
-            <div class = "gameRow">
-                <div class = "cell top"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-            </div>
-            <div class = "gameRow">
-                <div class = "cell top"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-            </div>
-            <div class = "gameRow">
-                <div class = "cell top"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-            </div>
-            <div class = "gameRow">
-               <div class = "cell top"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-            </div>
-            <div class = "gameRow">
-                <div class = "cell top"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-                <div class = "cell"></div>
-            </div>
-        </div>
+    <div class="currentPlayer">The Current Player Is</div>
+    <br>
+    <div class = "board">
+        <div class="cell row-top col-0" id = cell></div>
+        <div class="cell row-top col-1" id = cell></div>
+        <div class="cell row-top col-2" id = cell></div>
+        <div class="cell row-top col-3" id = cell></div>
+        <div class="cell row-top col-4" id = cell></div>
+        <div class="cell row-top col-5" id = cell></div>
+        <div class="cell row-top col-6" id = cell></div>
+        <div class="cell row-0 col-0 left-border top-border" id = cell></div>
+        <div class="cell row-0 col-1 top-border" id = cell></div>
+        <div class="cell row-0 col-2 top-border" id = cell></div>
+        <div class="cell row-0 col-3 top-border" id = cell></div>
+        <div class="cell row-0 col-4 top-border" id = cell></div>
+        <div class="cell row-0 col-5 top-border" id = cell></div>
+        <div class="cell row-0 col-6 top-border right-border" id = cell></div>
+        <div class="cell row-1 col-0 left-border" id = cell></div>
+        <div class="cell row-1 col-1" id = cell></div>
+        <div class="cell row-1 col-2" id = cell></div>
+        <div class="cell row-1 col-3" id = cell></div>
+        <div class="cell row-1 col-4" id = cell></div>
+        <div class="cell row-1 col-5" id = cell></div>
+        <div class="cell row-1 col-6 right-border" id = cell></div>
+        <div class="cell row-2 col-0 left-border" id = cell></div>
+        <div class="cell row-2 col-1" id = cell></div>
+        <div class="cell row-2 col-2" id = cell></div>
+        <div class="cell row-2 col-3" id = cell></div>
+        <div class="cell row-2 col-4" id = cell></div>
+        <div class="cell row-2 col-5" id = cell></div>
+        <div class="cell row-2 col-6 right-border" id = cell></div>
+        <div class="cell row-3 col-0 left-border" id = cell></div>
+        <div class="cell row-3 col-1" id = cell></div>
+        <div class="cell row-3 col-2" id = cell></div>
+        <div class="cell row-3 col-3" id = cell></div>
+        <div class="cell row-3 col-4" id = cell></div>
+        <div class="cell row-3 col-5" id = cell></div>
+        <div class="cell row-3 col-6 right-border" id = cell></div>
+        <div class="cell row-4 col-0 left-border" id = cell></div>
+        <div class="cell row-4 col-1" id = cell></div>
+        <div class="cell row-4 col-2" id = cell></div>
+        <div class="cell row-4 col-3" id = cell></div>
+        <div class="cell row-4 col-4" id = cell></div>
+        <div class="cell row-4 col-5" id = cell></div>
+        <div class="cell row-4 col-6 right-border" id = cell></div>
+        <div class="cell row-5 col-0 bottom-border left-border" id = cell></div>
+        <div class="cell row-5 col-1 bottom-border" id = cell></div>
+        <div class="cell row-5 col-2 bottom-border" id = cell></div>
+        <div class="cell row-5 col-3 bottom-border" id = cell></div>
+        <div class="cell row-5 col-4 bottom-border" id = cell></div>
+        <div class="cell row-5 col-5 bottom-border" id = cell></div>
+        <div class="cell row-5 col-6 bottom-border right-border" id = cell></div>
     </div>
 
-    <button>Reset</button>
-              
+    <div class = "footer">
+        <button>Reset</button>
+        <span class="status"></span>
+    </div>  
 </body>
 </html>
 
