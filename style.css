@@ -1,27 +1,61 @@
-
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-align: center;
+  }
   
+  body {
+    align-items: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 25px;
+    width: 100%;
+  }
+.container{
+    background-color: black;
+    /* padding: 60px; */
+    /* text-align: center; */
+    color: white;
+    font-size: 30px;
+    width: 103%;
+
 }
+  h1{
+      color: silver;
+      font-family: cursive;
+      font-size: 100px;
+      margin: 60px;
+
+  }
+  h3{
+    /* padding: 60px; */
+
+  }
+  
 .board{
     border: 1px solid black;
     display: flex;
-    height: 800px;
+    height: 610px;
     width: 800px;
     background-color: lightblue;
     flex-wrap: wrap;
-    text-align: center;
-    padding: 10px;
+    /* text-align: center; */
+    padding: auto;
     
 }
 
 .cell{
-    height:100px; 
+    height:70px; 
     width:100px; 
     margin:10px;
     border-radius:20px;
     background-color:  whitesmoke;
-    align-self: center;
+    /* text-align: center; */
+    border: 3px solid black;
+
     
     
 } 
