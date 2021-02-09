@@ -1,24 +1,24 @@
-let game = new Board();
+/* global Board */
+/* global Player */
 
-// let curretPlayer = player1;
+
+let board = new Board();
+
+let playerOne = new Player("Player 1", "red");
+let playerTwo = new Player("Player 2", "black");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // let cell = document.getElementsByClassName("cell");
     
-    // document.querySeceladdEventListener("click", clickBox)
-    
+    let cell = document.getElementsByClassName("cell");
 
-    document.querySelectorAll("cell").forEach(cell => {
-        cell.addEventListener("click", findNextMovement)
-      })
-    
+    document.querySelectorAll("div.top").forEach(cell => {
+        cell.addEventListener("click", function(e) {
 
-
-     
-        
-})
+        console.log(cell.style);
+        cell.setAttribute("style", "background-color: red");
+        });
+    });
+});
 
 
-
-// console.log(div)
