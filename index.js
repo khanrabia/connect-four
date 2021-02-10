@@ -298,4 +298,4 @@ document.addEventListener("DOMContentLoaded", () => {
         redIsNext = true;
         statusSpan.textContent = '';
       });
-})
+});
