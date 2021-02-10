@@ -1,20 +1,19 @@
-<<<<<<< HEAD
-const allCells = document.querySelectorAll('#cell');
+
+const allCells = document.querySelectorAll('.cell');
 const topCells = document.querySelectorAll('.cell.row-top');
 const resetButton = document.querySelector('.reset');
 const spanSatus = document.querySelector('.staus');
-=======
-<<<<<<< HEAD
+
 document.addEventListener("DOMContentLoaded", () => {
     
 			
 
 
 })
-=======
+
 /* global Board */
 /* global Player */
->>>>>>> e1bfb8978453b109affeed169230da8c558c638a
+
 
 
 // columns
@@ -103,7 +102,7 @@ const checkGameStatus = function (cell){
   const [rowIndex, colIndex] = cellLocation(cell);
 
   // horizony6tal check
-
+    
 }
 
 
@@ -184,4 +183,4 @@ const checkGameStatus = function (cell){
 
 // });
 
->>>>>>> 1d61a1d144c124e926b229feb0c0d932c0e4a2ee
+
