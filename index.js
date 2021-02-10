@@ -101,8 +101,78 @@ const checkGameStatus = function (cell){
   const color = colorCell(cell);
   const [rowIndex, colIndex] = cellLocation(cell);
 
-  // horizony6tal check
-    
+  // horizantal check
+//     function checkWinnerVertical(board, color) {
+//   // count variable to hold number of consecutive colors
+//   var count = 0
+//   // Since i goes up by one for each row vertically, we create a loop the length of the board.
+//   // We create 6 if statements to check from 0-5, to see if the color matches functions 'color'
+//   // input.
+
+//   for (let i=0; i < board.length; i++) {
+//     // if color matches we increment count by 1
+//     if (board[0][i] == color) {
+//       count += 1
+//       // if color does not match at any point, we set count back to '0'
+//     } else {count = 0}
+//     if (board[1][i] == color) {
+//       count += 1
+//     } else {count = 0}
+//     if (board[2][i] == color) {
+//       count += 1
+//     } else {count = 0}
+//     if (board[3][i] == color) {
+//       count += 1
+//       // We start checking if count reached 4 without being reset at the fourth check,
+//       // Because prior to this, it is not possible for count to reach 4.
+//       // If we have 4 of the same colors so far, we return true.
+//       if (count ==4) {return true}
+//     } else {count = 0}
+//     if (board[4][i] == color) {
+//       count += 1
+//       if (count ==4) {return true}
+//     } else {count = 0}
+//     if (board[5][i] == color) {
+//       count += 1
+//     if (count ==4) {return true}
+//     } else {count = 0}
+//   }
+//   // If we went through every row and never reached count of 4 matching colors, we return false.
+//   return false;
+// }
+// console.log(checkWinVer(board, 'x'))
+
+// var horizontalRow = [1,0,1,1,0,1]
+
+
+// function checkWiinnerHorizontal(horizontalRow, color) {
+//   // We have a flag that is fale to start off with, we use to control whether we increment count
+//   // or set count back to 0.
+//   let flag = false
+//   let count = 0
+//   // Loop the length of the horizontal row
+//   for(let i=0; i <horizontalRow.length; i++) {
+//     // if element in row matches function 'color' input we change the flag to true
+//     if (horizontalRow[i] == color) {
+//       flag = true
+//       // if the color doesn't match function input, we set flag to false, and reset counter to '0'
+//     } else if(horizontalRow[i] != color) {
+//       flag = false
+//       count = 0
+//     }
+//     // incrementing as long as flag remains true
+//     if (flag == true) {
+//       count += 1
+//     } 
+//     // if we reach count of 4, we return true for winner.
+//     if (count == 4) {
+//       return true
+//     }
+//   }
+//   // if loop ends and count never reached 4, we return false for no win.
+//   return false
+// }
+
 }
 
 
