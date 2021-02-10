@@ -36,7 +36,14 @@ class Board{
       ]
     this.winner = null;
     document.querySelectorAll("div").forEach(div => {
-      div.innerText = "";
+      div.innerText =  [
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""]
+      ];
     });
   }
   

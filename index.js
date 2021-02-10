@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
   const allCells = document.querySelectorAll('.cell:not(.row-top)');
   const topCells = document.querySelectorAll('.cell.row-top');
   const resetButton = document.querySelector('.reset');
@@ -294,8 +295,16 @@ document.addEventListener("DOMContentLoaded", () => {
             cell.classList.remove('win');
           }
         }
+        this.board.reset();
         gameIsActive = true;
         redIsNext = true;
         statusSpan.textContent = '';
       });
+      // function reset(){
+      //   console.log('hey')
+      //   this.board.innerHTML="" 
+      //   allCells.reset();
+      //   resetButton.style.display="none" 
+      // }
+      
 });
