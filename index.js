@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
   const allCells = document.querySelectorAll('.cell:not(.row-top)');
   const topCells = document.querySelectorAll('.cell.row-top');
   const resetButton = document.querySelector('.reset');
@@ -44,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const colIndex = colClass[4];
     const rowNumber = parseInt(rowIndex, 10);
     const colNumber = parseInt(colIndex, 10);
+
     
     return [rowNumber, colNumber];
   };
@@ -255,6 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
           clearColorFromTop(colIndex);
         };
 
+
       
       function handleCellClick (e) {
         if (!gameIsActive){
@@ -302,3 +306,4 @@ document.addEventListener("DOMContentLoaded", () => {
       
       
 })
+
