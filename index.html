@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect 4</title>
     <link rel="stylesheet" href="style.css">
-
-    <script src="board.js"></script>
-    <script src="player.js"></script>
     
     <link rel="shortcut icon" type="image/jpg" href="https://s1.mzstatic.com/us/r30/Purple/f1/81/0b/mzl.yoifaugo.jpg"/>
 
     
 </head>
 <body>
-    <div class = "container">
+    <div id = "animate-area"></div>
+
+	</div>
+    <div class = "gameContainer">
         <h1 id="title">Connect 4</h1>
     </div>
     <div class="currentPlayer">The Current Player Is</div>
@@ -72,7 +72,7 @@
     </div>
 
     <div class = "footer">
-        <button>Reset</button>
+        <button class = "reset">Reset</button>
         <span class="status"></span>
     </div>  
     <script src="index.js"></script>

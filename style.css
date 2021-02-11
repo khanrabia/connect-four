@@ -1,7 +1,23 @@
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#animate-area	{ 
+	width: 560px; 
+	height: 400px; 
+	background-image: url(bg-clouds.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 40s linear infinite;
 }
 
 body {
@@ -10,36 +26,44 @@ body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  padding: 25px;
   width: 100%;
 }
 
 h1 {
   text-transform: uppercase;
+  background-color: black;
+  color:silver;
+  width: 1350px;
+  height: 100px;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 45px;
+  font-family: cursive;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  height: 700px;
+  height: 300px;
   margin: 10px 0 25px;
-  width: 700px;
+  width: 300px;
+  align-items: center;
 }
 
 .cell {
   align-items: center;
-  background: #4370F1;
+  background: #4371f102;
   display: flex;
-  height: 100px;
+  height: 80px;
   justify-content: center;
-  width: 100px;
+  width: 80px;
 }
 
 .cell::after {
   background: white;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 3px solid rgb(240, 235, 235);
   content: '';
   cursor: pointer;
   height: 75px;
@@ -53,14 +77,6 @@ h1 {
   background: yellow;
 }
 
-.cell:not(.row-top).red.win {
-  background: red;
-}
-
-.cell:not(.row-top).yellow.win {
-  background: yellow;
-}
-
 .cell.row-top {
   background: white;
 }
@@ -71,76 +87,45 @@ h1 {
 
 .cell.row-top.red::after {
   background: red;
-  border: 3px solid black;
+  border: none;
 }
 
 .cell.row-top.yellow::after {
   background: yellow;
-  border: 3px solid black;
+  border: none;
 }
 
 .footer {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   width: 700px;
 }
 
 .reset {
-  background-color: #4370F1;
-  border-radius: 5px;
-  border: none;
-  color: white;
+  background-color: #03ccc2;
+  border-radius: 100px;
+  border: 100px;
+  color: rgb(31, 29, 29);
   cursor: pointer;
   display: block;
   font-size: 16px;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 30px 30px;
   text-transform: uppercase;
+  align-items: flex-start;
+  
+
+}
+.currentPlayer{
+  text-align: center;
+  padding: 20px;
 }
 
 .reset:hover {
-  background-color: #1D50F1;
+  background-color: #0eeaf1;
 }
-
-.reset:active {
-  background-color: #4d7ef1;
-
-}
-
 .status {
   display: block;
   font-size: 20px;
-}
-
-.left-border {
-  border-left: 3px solid black;
-}
-
-.top-border {
-  border-top: 3px solid black;
-}
-
-.right-border {
-  border-right: 3px solid black;
-}
-
-.bottom-border {
-  border-bottom: 3px solid black;
-}
-
-.left-border.top-border {
-  border-radius: 10px 0 0 0;
-}
-
-.right-border.top-border {
-  border-radius: 0 10px 0 0;
-}
-
-.right-border.bottom-border {
-  border-radius: 0 0 10px 0;
-}
-
-.left-border.bottom-border {
-  border-radius: 0 0 0 10px;
 }

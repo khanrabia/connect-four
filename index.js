@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       
       gameIsActive = false;
-      statusSpan.textContent = "Game is a tie!";
+      statusSpan.innerText = "Game is a tie!";
     };
     
     // Event Handlers
@@ -286,7 +286,8 @@ document.addEventListener("DOMContentLoaded", () => {
           cell.addEventListener('click', handleCellClick);
         }
       }
-      resetButton.addEventListener('click', () => {
+      resetButton.addEventListener('click', reset)
+      function reset(){
         for (const row of rows) {
           for (const cell of row) {
             cell.classList.remove('red');
@@ -297,5 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gameIsActive = true;
         redIsNext = true;
         statusSpan.textContent = '';
-      });
+      }
+      
+      
 })

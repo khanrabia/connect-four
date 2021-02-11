@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+    background: white;
+    font-family: sans-serif;
+    width: 100%;
+}
+h1 {
+    text-transform: uppercase;
+    background-color: black;
+    color:silver;
+    width: 1350px;
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 45px;
+    font-family: cursive;
+  }
+
+  h2{
+    
+    width: 1350px;
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 45px;
+    font-family: cursive;
+  }
+
+  
+  .buttons{
+
+  }
