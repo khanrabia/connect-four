@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const allCells = document.querySelectorAll('.cell:not(.row-top)');
   const topCells = document.querySelectorAll('.cell.row-top');
-  const resetButton = document.querySelector('#reset');
+  const resetButton = document.querySelector('.reset');
   const statusSpan = document.querySelector('.status');
   
   // columns
@@ -300,5 +300,4 @@ document.addEventListener("DOMContentLoaded", () => {
         redIsNext = true;
         statusSpan.textContent = '';
       }
-      
 });
