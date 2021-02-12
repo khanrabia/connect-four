@@ -1,6 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-
+  
+  //first player
+  let url = new URL(document.URL);
+  let playerOne = url.searchParams.get('player-one');
+  // second player
+  let playerTwo = url.searchParams.get('player-two'); 
+  // js for greeting
+  let headline = document.querySelector("#headline");
+  let greetingOne = document.querySelector("#greetingOne");
+  let greetingTwo = document.querySelector("#greetingTwo");
+  // greeting.innerHTML.replace("red", "blue");
+  headline.innerHTML += `Greetings ${playerOne} and ${playerTwo}`;
+  greetingOne.innerHTML += `${playerOne} is red ${playerOne} you go first!`;
+  greetingTwo.innerHTML += `${playerTwo} is yellow`;
+  let colorOne = greetingOne.innerHTML.replace("red", "red".fontcolor("red"));
+  let colorTwo = greetingTwo.innerHTML.replace("yellow", "yellow".fontcolor("yellow"));
+  
+  greetingOne.innerHTML = colorOne;
+  greetingTwo.innerHTML = colorTwo;
+  
+  
   const allCells = document.querySelectorAll('.cell:not(.row-top)');
   const topCells = document.querySelectorAll('.cell.row-top');
   const resetButton = document.querySelector('.reset');
