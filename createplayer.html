@@ -2,25 +2,29 @@
 <html>
 <head>
 <title>Page Title</title>
+
 </head>
 <body>
 
-<form action="/action_page.php" style="max-width:500px;margin:auto">
+<form action="index.html" style="max-width:500px;margin:auto" method="GET">
   <h2>Player Form</h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Player One Name">
+    <input class="input-field" id="player-one" type="text" placeholder="Player One Name">
   </div>
 
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Player Two Name">
+    <input class="input-field" type="text" id="player-two" placeholder="Player Two Name">
   </div>
   
 
-</form>
-<a href="index.html">
-  <button type="submit" class="btn">Here're Our Names</button>
-  </a>
+<!--</form>-->
+<!--<form action="/action_page.php" style="max-width:500px;margin:auto">-->
+<!--<a href="index.html">-->
+  <button type="submit" id="nameButton" class="btn">Here're Our Names</button>
+  <!--</a>-->
+  </form>
+  
 </body>
 </html>
