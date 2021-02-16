@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let greetingTwo = document.querySelector("#greetingTwo");
   // greeting.innerHTML.replace("red", "blue");
   headline.innerHTML += `Greetings ${playerOne} and ${playerTwo}`;
-  greetingOne.innerHTML += `${playerOne} is red ${playerOne} you go first!`;
-  greetingTwo.innerHTML += `${playerTwo} is yellow`;
+  greetingOne.innerHTML += `${playerOne} is red ${playerOne} plays first!`;
+  greetingTwo.innerHTML += `${playerTwo} is yellow ${playerOne} plays next!`;
   let colorOne = greetingOne.innerHTML.replace("red", "red".fontcolor("red"));
   let colorTwo = greetingTwo.innerHTML.replace("yellow", "yellow".fontcolor("yellow"));
   
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } 
     const [rowIndex, colIndex] =  cellLocation(cell);
       
-      // Check horizontally
+      // Check horizontally 
       let winningCells = [cell];
       let rowToCheck = rowIndex;
       let colToCheck = colIndex - 1;
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
       
-      // Check vertically
+      // Check vertically winning cells
       winningCells = [cell];
       rowToCheck = rowIndex - 1;
       colToCheck = colIndex;
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       } 
       
-      // Check diagonally /
+      // Check diagonally / winning cells
       winningCells = [cell];
       rowToCheck = rowIndex + 1;
       colToCheck = colIndex - 1;
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       } 
       
-      // Check diagonally \
+      // Check diagonally \ winning cells
       winningCells = [cell];
       rowToCheck = rowIndex - 1;
       colToCheck = colIndex - 1;
@@ -322,7 +322,4 @@ document.addEventListener("DOMContentLoaded", () => {
         redIsNext = true;
         statusSpan.textContent = '';
       }
-      
-      
 })
-
