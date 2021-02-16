@@ -2,30 +2,46 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
 
+
 body {
-  align-items: center;
-  background: white;
+  text-align: center;
+  background-color:black;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-  padding: 25px;
   width: 100%;
 }
 
 h1 {
-  text-transform: uppercase;
+  font-size: 30px;
+  color:white;
+  margin-top: 0px;
+  font-size: 400%;
+}
+#headline{
+  color:white;
+  padding-top: 40px;
+  font-size: 35px;
+}
 
-  background-color: black;
-  color:silver;
-  width: 1350px;
-  height: 100px;
-  text-align: center;
-  padding-top: 30px;
-  font-size: 45px;
-  font-family: cursive;
+#greetingOne{
+  color:white;
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+#greetingTwo{
+  color:white;
+  padding-top: 20px;
+  font-size: 25px;
+}
+.status {
+  display: block;
+  font-size: 40px;
+  color: white;
 }
 
 .board {
@@ -36,14 +52,15 @@ h1 {
   height: 300px;
   margin: 10px 0 25px;
   width: 300px;
-  align-items: center;
+  text-align: center;
+  padding-left: 30%;
 
 }
 
 .cell {
   align-items: center;
 
-  background: #4371f102;
+  background:black;
   display: flex;
   height: 80px;
   justify-content: center;
@@ -51,7 +68,7 @@ h1 {
 }
 
 .cell::after {
-  background: white;
+  background: black;
   border-radius: 50%;
   border: 3px solid rgb(240, 235, 235);
   content: '';
@@ -68,7 +85,7 @@ h1 {
 }
 
 .cell.row-top {
-  background: white;
+  background: black;
 }
 
 .cell.row-top::after {
@@ -90,10 +107,13 @@ h1 {
   display: flex;
   justify-content: left;
   width: 700px;
+  padding-top: 300px;
+  padding-left:650px;
+  
 }
 
 .reset {
-  background-color: #03ccc2;
+  background-color: rgb(255,215,0);
   border-radius: 100px;
   border: 100px;
   color: rgb(31, 29, 29);
@@ -103,19 +123,17 @@ h1 {
   font-weight: bold;
   padding: 30px 30px;
   text-transform: uppercase;
-  align-items: flex-start;
-  
-
 }
+
 .currentPlayer{
   text-align: center;
   padding: 20px;
 }
 
 .reset:hover {
-  background-color: #0eeaf1;
+  background-color: rgb(255,0,0);
 }
-.status {
-  display: block;
-  font-size: 20px;
+.extra{
+  background:
+    url(https://miro.medium.com/max/700/1*g9ee7RUD831R9n6Km5Jizg.gif) bottom center no-repeat;
 }
