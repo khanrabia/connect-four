@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const cell of cells) {
       cell.classList.add('win');
     }
-    status.textContent = `${redIsNext ?   `${playerOne}` : `${playerTwo}`} has won!`;
+    status.innerText = `${redIsNext ? `${playerOne}` : `${playerTwo}`} has won!`;
     return true;
   };
   // checks the status of the game and checking if the player has wons by cehcking all possible moves of wining.
@@ -295,19 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gameIsActive = false;
       status.innerText = "Game is a tie!";
     };
-    // reset button
-    function reset(){
-      for (const row of rows) {
-        for (const cell of row) {
-          cell.classList.remove('red');
-          cell.classList.remove('yellow');
-          cell.classList.remove('win');
-        }
-      }
-      gameIsActive = true;
-      redIsNext = true;
-      status.textContent = '';
-    }
+    
     // Event Handlers functions 
     function cellMouseOver (event) {
       if (!gameIsActive) {
@@ -316,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const cell = event.target;
       const [rowIndex, colIndex] =  cellLocation(cell);
         const topCell = topCells[colIndex];
-        topCell.classList.add(redIsNext ? 'red' : 'yellow');
+        topCell.classList.add(`${redIsNext ?   `${playerOne}` : `${playerTwo}`}`);
       };
       
       function cellMouseOut (event)  {
@@ -334,6 +322,19 @@ document.addEventListener("DOMContentLoaded", () => {
           cell.addEventListener('click', cellClick);
         }
       }
-      resetButton.addEventListener('click', reset)
+      resetButton.addEventListener('click', reset);
+      // reset button
+    function reset(){
+      for (const row of rows) {
+        for (const cell of row) {
+          cell.classList.remove('red');
+          cell.classList.remove('yellow');
+          cell.classList.remove('win');
+        }
+      }
+      gameIsActive = true;
+      redIsNext = true;
+      status.innerText = '';
+    }
 
 })
