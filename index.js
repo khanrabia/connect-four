@@ -295,19 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gameIsActive = false;
       status.innerText = "Game is a tie!";
     };
-    // reset button
-    function reset(){
-      for (const row of rows) {
-        for (const cell of row) {
-          cell.classList.remove('red');
-          cell.classList.remove('yellow');
-          cell.classList.remove('win');
-        }
-      }
-      gameIsActive = true;
-      redIsNext = true;
-      status.innerText = '';
-    }
+   
     
     // Event Handlers functions 
     function cellMouseOver (event) {
@@ -317,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const cell = event.target;
       const [rowIndex, colIndex] =  cellLocation(cell);
         const topCell = topCells[colIndex];
-        topCell.classList.add(`${redIsNext ?   `${playerOne}` : `${playerTwo}`}`);
+        topCell.classList.add(`${redIsNext ? `${playerOne}` : `${playerTwo}`}`);
       };
       
       function cellMouseOut (event)  {
@@ -336,5 +324,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       resetButton.addEventListener('click', reset);
+       // reset button
+    function reset(){
+      for (const row of rows) {
+        for (const cell of row) {
+          cell.classList.remove('red');
+          cell.classList.remove('yellow');
+          cell.classList.remove('win');
+        }
+      }
+      gameIsActive = true;
+      redIsNext = true;
+      status.textContent = '';
+    }
       
 })
