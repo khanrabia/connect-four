@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //changes the innerhtml and customize it according to the name and then greets or messegaes the user
   headline.innerHTML += `Greetings ${playerOne} and ${playerTwo}`;
   greetingOne.innerHTML += `${playerOne} is red ${playerOne} plays first!`;
-  greetingTwo.innerHTML += `${playerTwo} is yellow ${playerOne} plays next!`;
+  greetingTwo.innerHTML += `${playerTwo} is yellow ${playerTwo} plays next!`;
   
   // changes the color of the font
   let colorOne = greetingOne.innerHTML.replace("red", "red".fontcolor("red"));
@@ -295,6 +295,19 @@ document.addEventListener("DOMContentLoaded", () => {
       gameIsActive = false;
       status.innerText = "Game is a tie!";
     };
+    // reset button
+    function reset(){
+      for (const row of rows) {
+        for (const cell of row) {
+          cell.classList.remove('red');
+          cell.classList.remove('yellow');
+          cell.classList.remove('win');
+        }
+      }
+      gameIsActive = true;
+      redIsNext = true;
+      status.innerText = '';
+    }
     
     // Event Handlers functions 
     function cellMouseOver (event) {
@@ -323,18 +336,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       resetButton.addEventListener('click', reset);
-      // reset button
-    function reset(){
-      for (const row of rows) {
-        for (const cell of row) {
-          cell.classList.remove('red');
-          cell.classList.remove('yellow');
-          cell.classList.remove('win');
-        }
-      }
-      gameIsActive = true;
-      redIsNext = true;
-      status.innerText = '';
-    }
-
+      
 })
