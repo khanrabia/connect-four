@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const cell of cells) {
       cell.classList.add('win');
     }
-    status.textContent = `${redIsNext ?   `${playerOne}` : `${playerOne}`} has won!`;
+    status.textContent = `${redIsNext ?   `${playerOne}` : `${playerTwo}`} has won!`;
     return true;
   };
   // checks the status of the game and checking if the player has wons by cehcking all possible moves of wining.
