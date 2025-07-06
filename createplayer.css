@@ -1,51 +1,57 @@
-body{
-    background-color: white;
-    background-color: black;
-    position: relative;
-    animation-name: example;
-    animation-duration: 50s;
-    animation-delay: -2s;
-    text-align: center;
+body {
+  background-color: black;
+  text-align: center;
+  animation: backgroundFade 50s infinite alternate;
 }
 
-h1{
-   
-    font-size: 30px;
-    color:white;
-    margin-top: 0px;
-    padding-top: 40px;
-    font-size: 400%;
-    
+h1 {
+  color: white;
+  margin-top: 0;
+  padding-top: 40px;
+  font-size: 400%;
 }
 
-h2{
-    
-    font-size: 30px;
-    color: white;    
+h2 {
+  color: white;
+  font-size: 30px;
 }
 
-.input-container{
-  
-    padding: 20px;
-    color: white;
-    font-size: 20px;
+.input-container {
+  padding: 20px;
+  color: white;
+  font-size: 20px;
 }
 
-.btn{
-    height: 90px;
-    width: 90px;
-    margin:40px;
-    background-color: turquoise;
-    animation-name: stretch;
-    animation-duration: 1.5s; 
-    animation-iteration-count: infinite;
+.input-field {
+  padding: 10px;
+  font-size: 18px;
+  width: 80%;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn {
+  height: 90px;
+  width: 90px;
+  margin: 40px;
+  background-color: turquoise;
+  animation: stretch 1.5s infinite;
+  border-radius: 50%;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: violet;
 }
 
 @keyframes stretch {
   0% {
-    transform: scale(.3);
-    background-color:turquoise;
-    border-radius: 100%;
+    transform: scale(0.3);
+    background-color: turquoise;
   }
   50% {
     background-color: violet;
@@ -54,4 +60,9 @@ h2{
     transform: scale(1.5);
     background-color: peachpuff;
   }
+}
+
+@keyframes backgroundFade {
+  from { background-color: black; }
+  to { background-color: #222; }
 }
